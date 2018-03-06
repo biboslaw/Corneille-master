@@ -1,0 +1,702 @@
+@font-face {
+    font-family: openSans;
+    src: url(../fonts/OpenSans-Light.ttf);
+}
+
+html {
+    background-color: #727071;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: openSans;
+    color: white;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    opacity: 1;
+    transition: 0.2s linear;
+}
+
+.topnav {
+    background-color: #9c9e9f;
+    overflow: hidden; 
+    height: 120px;
+    border-bottom: 1px solid white;
+}
+
+.topnav a {
+    display: inline-block;
+    float: right;
+    color: white;
+    text-align: center;
+    
+    text-decoration: none;
+    font-size: 2.5rem;
+    padding: 25px 20px 25px 20px;
+}
+
+.topnav a:hover {
+    background-color: rgba(76,175,80,0.5);
+    color: black;
+}
+
+.topnav a.active {
+    color: white;
+}
+
+.iconRwd {
+    display: none;
+    float: right;
+    text-align: center; 
+}
+
+.logoLink {
+    height: 200px;
+    width: 200px;
+}
+
+.logoNav {
+    display: none;
+}
+
+#home .column img {
+    display: none;
+}
+
+#home {
+    height: 100vh;
+    position: relative;
+    background-image: url(../images/BAD_7808_.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    border: 1px solid white;
+    z-index: 0;
+    margin: auto;
+    box-shadow: 0px 0px 30px #222;
+    width: 35%;
+    height: auto; 
+}
+
+
+#about {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+    
+}
+
+#about h1 {
+    line-height: 2em;
+    font-size: 2rem;
+}
+
+#about p {
+    text-align: justify;
+    font-size: 2rem;
+}
+
+#about img:first-child{
+    display: none;
+}
+
+.sentence {
+    background-image: url(../images/wood_1920_1200.jpeg);
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.sentence div {
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.sentence div h1 {
+    padding: 20px 0;
+    margin: 0 auto;
+    text-align: center;
+    font-family: openSans;
+    letter-spacing: 0.09rem;
+    font-size: 1.7rem;
+    color: #ddd;
+    text-align: justify;
+}
+
+#products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#products h2 {
+    text-align: center;
+}
+
+#products h4 {
+    text-align: right;
+    color: #16a085;
+    padding-right: 20px;
+}
+
+#products p {
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.product {
+    width: 100%;
+    margin-top: 2em;
+    color: white;
+    
+}
+
+.product:nth-last-child(1){
+    margin-bottom: 2em;
+}
+
+.product img {
+    width: 85%;
+    height: auto;
+    border: 4px solid white;
+    border-radius: 3px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;   
+}
+
+
+#contact {
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.contactData p {
+    padding: 0 20px;
+    display: inline-block;
+}
+
+.contactLogo {
+    display: inline-block;
+    width: 30%;
+    margin: 30px auto 10px auto;
+    box-shadow: 3px 3px 10px #555;
+
+}
+
+.socialMedia {
+    display: block;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #d2d2d2;
+    width: 100%;
+    height: 15%;
+    position: absolute;
+    bottom: 0;
+    box-shadow: inset 0px 11px 15px -7px grey;
+}
+
+/* form styling */
+
+form {
+    margin: 40px auto 0 auto;
+    width: 80%;
+
+}
+
+form div + div {
+    margin-top: 1em;
+}
+
+label {
+    display: inline-block;
+    width: 70px;
+    text-align: left;
+    color: #333;
+    padding-bottom: 2px;
+}
+
+input, textarea {
+    font: 1em sans-serif;
+    width: 60%;
+    box-sizing: border-box;
+    border-top: 1px solid #eee;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #777;
+    border-bottom: 1px solid #777;
+    box-shadow: 2px 2px 4px #ccc;
+    
+}
+
+input:focus, textarea:focus {
+    border-color: #000;
+}
+
+textarea {
+    vertical-align: top;
+    height: 5em;
+}
+
+.button {
+    text-align: ceter;
+}
+/* end form styling */
+.fbIcon {
+    width: 70px;
+    height: auto;
+    transition: 0.2s linear;
+    padding-top: 5px;
+}
+
+.fbIcon:hover {
+    transform: scale(1.2);
+}
+
+.instaIcon {
+    width: 70px;
+    height: auto;
+    transition: 0.2s linear;
+    padding-top: 5px;
+}
+
+.instaIcon:hover {
+    transform: scale(1.2);
+}
+
+.hidden {
+    display: none;
+}
+.hidden2 {
+    opacity: 0;
+}
+
+.modal {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 5;
+    
+}
+.modalBlur {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 4;
+    
+}
+
+.blur {
+    filter: blur(25px);
+}
+
+.modalGallery {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.modal .modalGallery .mainImage {   
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 2px solid white;
+    box-sizing: border-box;
+}
+
+.modal .modalGallery img {
+    margin-top: 20px;
+    border: 2px solid white;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 31.5%;
+    cursor: pointer;
+    
+}
+
+.modal .modalGallery img:nth-child(3) {
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+@media only screen and (max-height: 480px) {
+    .contactData {
+        height: 5%;
+    }
+    .contactData p {
+        margin: 0;
+    }
+    .socialMedia {
+        height: 16%;
+    }
+    
+}
+
+@media only screen and (-webkit-device-pixel-ratio: 3){
+    #home {
+        background-size: cover;
+    }
+    .socialMedia {
+        height: 15%;
+        padding-bottom: 15px;
+    }
+}
+
+@media only  screen and (-webkit-device-pixel-ratio: 2){
+    #home {
+        background-size: cover;
+    }
+}
+/* nav */
+@media only screen and (max-width: 600px) {
+    
+    .topnav a {
+        display: none;
+        transition: 0.2s;
+        
+    }
+    
+    .iconRwd {
+        outline: none;
+        height: 44px;
+        width: 56px;
+        float:right;
+        display: inline-block;
+        padding: 0 0 4px 0;
+        margin: 0;
+        font-size: 32px;
+        color: white;  
+        background-color: rgba(0,0,0,0.1);
+        border-bottom-left-radius: 5px;
+        border: none;
+        position: fixed;
+        
+    }
+    
+    .topnav {
+        color: darkgrey;
+        background-color: transparent;
+        position: absolute;
+        float: none;
+        width: 100%;
+        display: block;
+        background-color: rgba(255,255,255,0.8);
+        color: #888;
+        z-index: -1;
+    }
+    
+    .topnav a.active{
+        background-color: rgba(0,0,0,0.1);
+    }
+    .topnav a.topnavRwd{
+        float: none;
+        width: 100%;
+        display: block;
+        background-color: rgba(255,255,255,0.8);
+        color: #888;
+        
+    }
+    .topnav a.iconRwd2 {
+        display: none;
+    } 
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    #home {
+        background-image: url(../images/midScreenBack.jpg);
+        background-position: center center;
+        overflow: hidden;
+    }
+    .logo {
+        background-color: silver;
+        width: 30%;
+        height: auto;
+    }
+    #about {
+        width: 80%;
+        padding: 0;
+        margin: 0 auto;
+    }
+    #products .product {
+        width: 70%;
+    }
+    #products .product:nth-child(1){
+        margin-top: 20px;
+    }
+    .modal .modalGallery {
+        width: 60%;
+    }
+    .modal .modalGallery .mainImage {
+        
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    .modal {
+        overflow-x: scroll;
+        overflow-y: scroll;
+
+    }
+    .modal .modalGallery img {
+        width: 32%;
+    }
+    #contact {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;    
+    }
+
+    .contactData {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: 20px;
+        margin-top: 110px;
+    }
+    .contactData p {
+        
+        padding: 0;
+    }
+    .contactLogo {
+        
+        width: 25%;
+        margin: 0;
+        padding: 0;
+        margin-right: 20px;
+        margin-top: 60px;    
+    }
+    form {
+        margin-top: 0;
+        padding-top: 0;
+        height: 45%
+    }
+}
+
+@media only screen and (min-width: 1025px) { 
+
+    #home {
+       display: none;
+    }
+    
+    .logoNav {
+        display: inline-block;
+        position: fixed;
+        top: 50px;
+        left: 250px;
+        width: 13%;
+        z-index: 3;
+        border: 1px solid white;
+   
+        transition: 0.4s linear;
+    }
+    
+    .logo {
+        background-color: silver;
+        width: 20%;
+        height: auto;
+    }
+    #about {
+        padding: 120px 0 10rem 0;
+        margin: 0 auto;
+        width: 80%;
+    }
+    #about p {
+        margin: 20px auto 25px auto;
+        -webkit-column-count:  2; /* Chrome, Safari, Opera */
+        -moz-column-count:  2; /* Firefox */
+        column-count:  2;
+        -webkit-column-gap: 100px; /* Chrome, Safari, Opera */
+        -moz-column-gap: 100px; /* Firefox */
+        column-gap: 100px;
+    }
+    #about img:first-child{
+        display: inline-block;
+        width: 100%;
+        height: 80%;
+        overflow-y: hidden;
+        border: 1px solid white;
+    }
+    #products {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        margin: 0 auto;
+    }
+    .sentence div {
+        height: 180px;
+    }
+    .sentence div h1 {
+        text-align: center;
+    }
+    .product {
+        margin-top: 10rem;
+        width: 45%;
+        box-sizing: border-box;
+        margin-bottom: 2em;
+        display: flex;
+        flex-direction: column;
+    }
+    .product img {
+        width: 60%;
+        margin-top: 0px;
+        
+    }
+    .product[data-product='dorica'] img{
+       margin-right: 0;
+        margin-top: 2rem;
+        
+    }
+    .product[data-product='cora'] img{
+        margin-left:  0;
+    }
+    .rightDesc {
+        margin-top: 4rem;
+        background-color: #504a4a;
+        
+    }
+    #products .rightDesc > * {
+        width: 59%;
+        padding-left: 2%;
+        
+    }
+    .leftDesc {
+        background-color: #504a4a;
+        margin-right: 0;
+        
+    }
+    #products .leftDesc > * {
+        width: 59%;
+        padding-right: 2%;
+        float: right;
+
+    }
+    .picture img {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
+    .modal .modalGallery {
+        width: 60%;        
+    }
+    .modal .modalGallery img {
+        width: 32.8%;
+    }
+    .modal {
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }  
+    #contact {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;  
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .contactData {
+        margin-left: 20px;
+        margin-bottom: 90px;
+        order: 3;
+        width: 50%;
+    }
+    .contactData p {
+        display: inline-block;
+        padding: 0 10px;;
+    }
+    .contactLogo {
+        height: 40%;
+        width: auto;
+        margin: 0;
+        padding: 0;
+        margin-right: 0;
+        margin-top: 40px; 
+        border: 1px solid silver; 
+        margin-left: 80px;
+
+    }
+    form {
+        margin-top: 43px;
+        padding-top: 20px;
+        height: 40.5%;
+        width:60%;
+        order: 2;
+        border: 1px solid silver;
+        box-sizing: border-box;
+    }
+    .socialMedia {
+        order: 4;
+        justify-content:flex-end;
+    }
+    .fbIcon, instaIcon {
+        margin: 0 20px;
+    }
+    .instaIcon {
+        padding-right: 80px;
+    }
+}
+
+@media only screen and (max-width: 1025px) and (orientation: landscape){
+    #contact {
+        height: 450px;
+    }
+    .contactLogo {
+        margin-top: 10px;
+        width: 15%;
+    }
+    .contactData {
+        margin-top: 50px;;
+    }
+    .fbIcon {
+        width: 60px;
+        height: auto;
+    }
+    .instaIcon {
+        width: 60px;
+        height: auto;
+    }
+    form {
+        height: 55%
+    }
+}
+
+@media only screen and (max-height: 480px) and (orientation: landscape){
+    .contactData {
+        height: 1%;
+        margin-top: 15px;
+    }
+}

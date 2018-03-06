@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   width="200"
+   height="200"
+   viewBox="0 0 200 200.00001"
+   enable-background="new 0 0 266.893 266.895"
+   xml:space="preserve"
+   sodipodi:docname="F_icon.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"><metadata
+     id="metadata9"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+     id="defs7" /><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     id="namedview5"
+     showgrid="false"
+     inkscape:zoom="0.8842429"
+     inkscape:cx="133.4465"
+     inkscape:cy="133.44749"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" /><g
+     id="g821"
+     transform="matrix(0.77604504,0,0,0.77603902,-3.5604944,48.352655)"><path
+       style="fill:#3c5a99"
+       inkscape:connector-curvature="0"
+       d="m 248.082,195.41201 c 7.854,0 14.223,-6.369 14.223,-14.225 V -48.082989 c 0,-7.857 -6.368,-14.224 -14.223,-14.224 H 18.812 c -7.857,0 -14.224,6.367 -14.224,14.224 V 181.18701 c 0,7.855 6.366,14.225 14.224,14.225 z"
+       id="Blue_1_" /><path
+       style="fill:#ffffff"
+       inkscape:connector-curvature="0"
+       d="M 182.409,195.41201 V 95.609011 h 33.499 l 5.016,-38.895 h -38.515 v -24.832 c 0,-11.261 3.127,-18.935 19.275,-18.935 l 20.596,-0.009 v -34.788 c -3.562,-0.474 -15.788,-1.533 -30.012,-1.533 -29.695,0 -50.025,18.126 -50.025,51.413 v 28.684 h -33.585 v 38.895 h 33.585 v 99.802999 z"
+       id="f" /></g></svg>

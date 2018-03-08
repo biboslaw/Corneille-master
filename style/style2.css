@@ -4,7 +4,7 @@
 }
 
 html {
-    background-color: #9a9d9e;
+    background-color: #727071;
 }
 
 body {
@@ -12,7 +12,6 @@ body {
     padding: 0;
     font-family: openSans;
     color: white;
-    letter-spacing: 0.02rem;
 }
 
 nav {
@@ -25,26 +24,24 @@ nav {
 
 .topnav {
     background-color: #9c9e9f;
-    overflow: hidden;
+    overflow: hidden; 
     height: 120px;
     border-bottom: 1px solid white;
-    display: flex;
-    justify-content: center;
 }
 
 .topnav a {
     display: inline-block;
-
+    float: right;
     color: white;
     text-align: center;
-
+    
     text-decoration: none;
     font-size: 2.5rem;
-    padding: 32px 20px 32px 20px;
+    padding: 25px 20px 25px 20px;
 }
 
 .topnav a:hover {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(76,175,80,0.5);
     color: black;
 }
 
@@ -55,7 +52,7 @@ nav {
 .iconRwd {
     display: none;
     float: right;
-    text-align: center;
+    text-align: center; 
 }
 
 .logoLink {
@@ -67,17 +64,16 @@ nav {
     display: none;
 }
 
-.home .column img {
+#home .column img {
     display: none;
 }
 
-.home {
+#home {
     height: 100vh;
     position: relative;
     background-image: url(../images/BAD_7808_.jpg);
     background-position: center center;
     background-repeat: no-repeat;
-    background-color: #727071;
 }
 
 .logo {
@@ -92,38 +88,30 @@ nav {
     margin: auto;
     box-shadow: 0px 0px 30px #222;
     width: 35%;
-    height: auto;
+    height: auto; 
 }
 
 
-.about {
+#about {
     text-align: center;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 40px;
-    background-color: #727071;
+    
 }
 
-.about h1 {
+#about h1 {
     line-height: 2em;
     font-size: 2rem;
 }
 
-.about p {
+#about p {
     text-align: justify;
     font-size: 1.2rem;
 }
 
-.about img:first-child {
+#about img:first-child{
     display: none;
-}
-
-.sentenceLast {
-    margin-top: 0;
-}
-
-.picture {
-    height: auto;
 }
 
 .sentence {
@@ -136,7 +124,7 @@ nav {
 
 .sentence div {
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0,0,0,0.7);
     display: flex;
     align-items: center;
     padding: 0 5%;
@@ -153,25 +141,25 @@ nav {
     text-align: justify;
 }
 
-.products {
+#products {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #727071;
+    
 }
 
-.products h2 {
+#products h2 {
     text-align: center;
 }
 
-.products h4 {
+#products h4 {
     text-align: right;
     color: #16a085;
     padding-right: 20px;
 }
 
-.products p {
+#products p {
     text-align: justify;
     padding-left: 20px;
     padding-right: 20px;
@@ -181,10 +169,10 @@ nav {
     width: 100%;
     margin-top: 2em;
     color: white;
-
+    
 }
 
-.product:nth-last-child(1) {
+.product:nth-last-child(1){
     margin-bottom: 2em;
 }
 
@@ -195,7 +183,7 @@ nav {
     border-radius: 3px;
     display: block;
     margin: 0 auto;
-    cursor: pointer;
+    cursor: pointer;   
     transition: all 0.1s linear;
     filter: grayscale(0.4);
 }
@@ -206,79 +194,33 @@ nav {
 }
 
 .picture2 {
-    height: 50vh;
+    height: 100vh;
     background-image: url(../images/table_details2.jpg);
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
-    box-shadow: inset 0px 9px 10px -7px #222,
-    inset 0px -9px 10px -7px #222;
-    border-bottom: 1px solid white;
     border-top: 1px solid white;
-    position: relative;
-    margin: 0 auto 40px auto;
-    background-color: #727071;
-}
-
-.picture2 div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: absolute;
-    bottom: 10%;
-    right: 10%;
-    top: 10;
-    bottom: 10%;
-    width: 80%;
-    height: 80%;
-    margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px;
-}
-
-.picture2 div * {
-    text-align: center;
-    color: white;
-}
-
-.picture2 div h1 {
-    font-size: 2rem;
-}
-
-.picture2 div p {
-    font-size: 1.2rem;
-}
-
-.contactHeader {
-    padding: 20px;
-    background-color: white;
+    border-bottom: 1px solid white;
+    box-shadow: inset 0px 11px 7px -7px #222, 
+                inset 0px -11px 7px -7px #222;
 
 }
 
-.contactHeader h1 {
-    margin: 0 auto;
-    color: #504a4a;
-    font-weight: 100;
-    text-align: center;
 
 }
 
-.contact {
-    background-color: #9a9d9e;
+#contact {
+    height: 100vh;
     text-align: center;
     position: relative;
     display: flex;
     flex-direction: column;
-    padding-bottom: 20px;
 }
+
+
 
 .contactData p {
     padding: 0 20px;
-    display: inline-block;
-}
-
-.contactData a {
-    margin: 10px;
     display: inline-block;
 }
 
@@ -287,7 +229,7 @@ nav {
     width: 30%;
     margin: 30px auto 10px auto;
     box-shadow: 3px 3px 10px #555;
-    border: 1px solid white;
+
 }
 
 .socialMedia {
@@ -307,9 +249,9 @@ nav {
 /* form styling */
 
 form {
-    margin: 10px auto 0 auto;
+    margin: 40px auto 0 auto;
     width: 80%;
-
+    
 }
 
 form div + div {
@@ -324,22 +266,20 @@ label {
     padding-bottom: 2px;
 }
 
-input,
-textarea {
+input, textarea {
     font: 1em openSans;
-    width: 90%;
+    width: 60%;
     box-sizing: border-box;
     border-top: 1px solid #777;
     border-left: 1px solid #777;
     border-right: 1px solid #777;
     border-bottom: 1px solid #777;
-    padding-left: 5px;
+    padding-left: 5px; 
     background-color: white;
-    margin: 5px;
+    
 }
 
-input:focus,
-textarea:focus {
+input:focus, textarea:focus {
     border-color: #000;
 }
 
@@ -348,8 +288,10 @@ textarea {
     height: 5em;
 }
 
-form button {
-    display: block;
+.button {
+    text-align: center;    
+}
+.button button {
     font-size: 1.1rem;
     border: 1px solid black;
     background-color: #504a4a;
@@ -357,51 +299,39 @@ form button {
     cursor: pointer;
     outline: none;
     transition: all 0.1s linear;
-    text-align: center;
-    margin: 5px auto 0 auto;
-    padding: 10px 15px;
 }
-
-form button:hover {
+.button button:hover{
     background-color: #655F5F;
-    -webkit-box-shadow: inset 0px 0px 4px 6px rgba(30, 30, 30, 0.2);
-    -moz-box-shadow: inset 0px 0px 4px 6px rgba(30, 30, 30, 0.2);
-    box-shadow: inset 0px 0px 4px 6px rgba(30, 30, 30, 0.2);
+    -webkit-box-shadow: inset 0px 0px 4px 6px rgba(30,30,30,0.2);
+    -moz-box-shadow: inset 0px 0px 4px 6px rgba(30,30,30,0.2);
+    box-shadow: inset 0px 0px 4px 6px rgba(30,30,30,0.2);
 }
-
 /* end form styling */
-
 .fbIcon {
     width: 70px;
     height: auto;
-    transition: fill 0.5s ease-in-out, transform 0.5s ease-in-out;
-    fill: white;
+    transition: 0.2s linear;
+    padding-top: 5px;
 }
 
 .fbIcon:hover {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-    fill: #3b5998;
+    transform: scale(1.2);
 }
 
 .instaIcon {
     width: 70px;
     height: auto;
-    transition: all 0.5s ease-in-out;
+    transition: 0.2s linear;
     padding-top: 5px;
-    fill: white;
 }
 
 .instaIcon:hover {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-    fill: red;
+    transform: scale(1.2);
 }
 
 .hidden {
     display: none;
 }
-
 .hidden2 {
     opacity: 0;
 }
@@ -412,20 +342,19 @@ form button:hover {
     position: fixed;
     left: 0;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0,0,0,0.7);
     z-index: 5;
-
+    
 }
-
 .modalBlur {
     height: 100%;
     width: 100%;
     position: fixed;
     left: 0;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0,0,0,0.7);
     z-index: 4;
-
+    
 }
 
 .blur {
@@ -439,7 +368,7 @@ form button:hover {
     width: 70%;
 }
 
-.modal .modalGallery .mainImage {
+.modal .modalGallery .mainImage {   
     display: block;
     width: 100%;
     height: auto;
@@ -454,7 +383,7 @@ form button:hover {
     display: inline-block;
     width: 31.5%;
     cursor: pointer;
-
+    
 }
 
 .modal .modalGallery img:nth-child(3) {
@@ -472,11 +401,11 @@ form button:hover {
     .socialMedia {
         height: 16%;
     }
-
+    
 }
 
-@media only screen and (-webkit-device-pixel-ratio: 3) {
-    .home {
+@media only screen and (-webkit-device-pixel-ratio: 3){
+    #home {
         background-size: cover;
     }
     .socialMedia {
@@ -485,39 +414,37 @@ form button:hover {
     }
 }
 
-@media only screen and (-webkit-device-pixel-ratio: 2) {
-    .home {
+@media only  screen and (-webkit-device-pixel-ratio: 2){
+    #home {
         background-size: cover;
     }
 }
-
 /* nav */
-
 @media only screen and (max-width: 600px) {
-
+    
     .topnav a {
         display: none;
         transition: 0.2s;
-
+        
     }
-
+    
     .iconRwd {
         outline: none;
         height: 44px;
         width: 56px;
-        float: right;
+        float:right;
         display: inline-block;
         padding: 0 0 4px 0;
         margin: 0;
         font-size: 32px;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.1);
+        color: white;  
+        background-color: rgba(0,0,0,0.1);
         border-bottom-left-radius: 5px;
         border: none;
         position: fixed;
-
+        
     }
-
+    
     .topnav {
         color: darkgrey;
         background-color: transparent;
@@ -525,32 +452,29 @@ form button:hover {
         float: none;
         width: 100%;
         display: block;
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(255,255,255,0.8);
         color: #888;
         z-index: -1;
     }
-
-    .topnav a.active {
-        background-color: rgba(0, 0, 0, 0.1);
+    
+    .topnav a.active{
+        background-color: rgba(0,0,0,0.1);
     }
-    .topnav a.topnavRwd {
+    .topnav a.topnavRwd{
         float: none;
         width: 100%;
         display: block;
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(255,255,255,0.8);
         color: #888;
-
+        
     }
     .topnav a.iconRwd2 {
         display: none;
-    }
+    } 
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
-    html {
-        background-color: #727071;
-    }
-    .home {
+    #home {
         background-image: url(../images/midScreenBack.jpg);
         background-position: center center;
         overflow: hidden;
@@ -560,25 +484,25 @@ form button:hover {
         width: 30%;
         height: auto;
     }
-    .about {
+    #about {
         width: 80%;
         padding: 0;
         margin: 0 auto;
     }
-    .products .product {
+    #products .product {
         width: 70%;
     }
-    .products .product:nth-child(1) {
+    #products .product:nth-child(1){
         margin-top: 20px;
     }
     .modal .modalGallery {
         width: 60%;
     }
     .modal .modalGallery .mainImage {
-
+        
         margin-left: auto;
         margin-right: auto;
-
+        
     }
     .modal {
         overflow-x: scroll;
@@ -588,50 +512,48 @@ form button:hover {
     .modal .modalGallery img {
         width: 32%;
     }
-    .contact {
+    #contact {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: flex-start;
+        align-items: flex-start;    
     }
+
     .contactData {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
         margin-left: 20px;
-        margin-top: 70px;
-    }
-    .contactData div p {
-        display: block;
+        margin-top: 110px;
     }
     .contactData p {
+        
         padding: 0;
     }
-    .contactData a svg {
-        width: 60px;
-    }
     .contactLogo {
-        width: 30%;
+        
+        width: 25%;
         margin: 0;
         padding: 0;
         margin-right: 20px;
-        margin-top: 60px;
+        margin-top: 60px;    
     }
     form {
-        margin-top: 30px;
+        margin-top: 0;
         padding-top: 0;
-        height: 45%;
+        height: 45%
     }
 }
 
 
 
-@media only screen and (min-width: 1025px) {
-    html {
-        background-color: #727071;
-    }
+@media only screen and (min-width: 1025px) { 
 
-    .home {
-        display: none;
+    #home {
+       display: none;
     }
-
+    
     .logoNav {
         display: inline-block;
         position: fixed;
@@ -640,41 +562,37 @@ form button:hover {
         width: 13%;
         z-index: 3;
         border: 1px solid white;
-
+   
         transition: 0.4s linear;
     }
-
+    
     .logo {
         background-color: silver;
         width: 20%;
         height: auto;
     }
-    .about {
+    #about {
         padding: 120px 0 8rem 0;
         margin: 0 auto;
         width: 80%;
     }
-    .about p {
+    #about p {
         margin: 20px auto 25px auto;
-        -webkit-column-count: 2;
-        /* Chrome, Safari, Opera */
-        -moz-column-count: 2;
-        /* Firefox */
-        column-count: 2;
-        -webkit-column-gap: 100px;
-        /* Chrome, Safari, Opera */
-        -moz-column-gap: 100px;
-        /* Firefox */
+        -webkit-column-count:  2; /* Chrome, Safari, Opera */
+        -moz-column-count:  2; /* Firefox */
+        column-count:  2;
+        -webkit-column-gap: 100px; /* Chrome, Safari, Opera */
+        -moz-column-gap: 100px; /* Firefox */
         column-gap: 100px;
     }
-    .about img:first-child {
+    #about img:first-child{
         display: inline-block;
         width: 100%;
         height: 80%;
         overflow-y: hidden;
         border: 1px solid white;
     }
-    .products {
+    #products {
         flex-direction: row;
         justify-content: space-between;
         align-items: stretch;
@@ -703,31 +621,27 @@ form button:hover {
     .product img {
         width: 60%;
         margin-top: 0px;
-
+        
     }
-    .product[data-product='dorica'] img {
-        margin-right: 0;
+    .product[data-product='dorica'] img{
+       margin-right: 0;
         margin-top: 2rem;
-
+        
     }
-    .product[data-product='cora'] img {
-        margin-left: 0;
+    .product[data-product='cora'] img{
+        margin-left:  0;
     }
     .rightDesc {
-        margin-top: 2.3em;
+        margin-top: 4rem;
         background-color: #504a4a;
         border-left: 1px solid white;
         border-top: 1px solid white;
         border-bottom: 1px solid white;
-        height: 240px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
     }
-    .products .rightDesc > * {
+    #products .rightDesc > * {
         width: 59%;
         padding-left: 2%;
-
+        
     }
     .leftDesc {
         background-color: #504a4a;
@@ -735,10 +649,9 @@ form button:hover {
         border-top: 1px solid white;
         border-bottom: 1px solid white;
         border-right: 1px solid white;
-        height: 240px;
-
+        
     }
-    .products .leftDesc > * {
+    #products .leftDesc > * {
         width: 59%;
         padding-right: 2%;
         float: right;
@@ -750,7 +663,7 @@ form button:hover {
         display: block;
     }
     .modal .modalGallery {
-        width: 60%;
+        width: 60%;        
     }
     .modal .modalGallery img {
         width: 32.8%;
@@ -758,99 +671,41 @@ form button:hover {
     .modal {
         overflow-x: hidden;
         overflow-y: scroll;
-    }
+    } 
     .picture2 {
         height: 50vh;
-        margin: 70px auto;
 
     }
-    .picture2 div {
-        position: absolute;
-        top: auto;
-        left: auto;
-        height: auto;
-        bottom: 90px;
-        right: 90px;
-        width: 30%;
-        background-color: rgba(0, 0, 0, 0.4);
-    }
-    .picture2 div * {
-        text-align: center;
-        color: white;
-    }
-    .picture2 div h1 {
-        font-size: 2rem;
-    }
-    .picture2 div p {
-        font-size: 1.5rem;
-    }
-    .contact {
+    #contact {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: flex-start;
-        width: 70%;
+        align-items: flex-start;  
+        width: 80%;
         margin: 0 auto;
-        height: 70vh;
-        background-color: #727071;
     }
-    .contactHeader {
-        margin-bottom: 80px;
-        height: 180px;
-        -webkit-box-shadow: 0px 0px 7px 4px rgba(50, 50, 50, 0.5);
-        -moz-box-shadow: 0px 0px 7px 4px rgba(50, 50, 50, 0.5);
-        box-shadow: 0px 0px 7px 4px rgba(50, 50, 50, 0.5);
-    }
-    .contactHeader h1 {
-        text-align: center;
-        line-height: 180px;
-        font-size: 4rem;
-        font-weight: 300;
-    }
+
     .contactData {
-        margin-bottom: 10px;
+        margin-left: 20px;
+        margin-bottom: 90px;
         order: 3;
-        width: 100%;
-        border-top: 1px solid white;
-        border-bottom: 1px solid white;
+        width: 50%;
     }
-    .contactData div {
-        float: left;
-        height: 100%;
-    }
-    .contactData div p {
-        display: block;
-        text-align: left;
-        font-size: 1.3rem;
-    }
-    .contactData div p:first-of-type {
-        margin-top: 0;
-        padding-top: 5px;
-    }
-    .contactData div p:last-of-type {
-        margin-bottom: 0;
-        padding-bottom: 5px;
-    }
-    .contactData a {
-        float: right;
-        margin: 0 0 0 20px;
-        padding: 10px 0 0 0;
-        width: 70px;
-        display: block;
-    }
-    .contactData a svg {
-        width: 70px;
-        margin: 0;
-        padding: 0;
+    .contactData p {
+        display: inline-block;
+        padding: 0 10px;;
     }
     .contactLogo {
         display: block;
-        margin: 0 auto;
-        height: 55%;
+        margin: 0 auto;    
+        height: 40%;
         width: auto;
+        
+        
         padding: 0;
-        margin-left: 0;
-        border: 1px solid white;
+        margin-right: 0;
+        margin-top: 40px; 
+        border: 1px solid white; 
 
 
     }
@@ -858,35 +713,32 @@ form button:hover {
         background-color: #9a9d9e;
         box-shadow: 3px 3px 10px #555;
         padding-top: 20px;
-        height: 55.5%;
+        height: 40.3%;
         width: 60%;
         order: 2;
         border: 1px solid white;
         box-sizing: border-box;
         margin-left: auto;
-        margin-right: 0;
-        margin-top: 0;
-
+        margin-right: auto;
+        
     }
 
-    input,
-    textarea {
+    input, textarea {
         font-size: 1.2rem;
         padding: 15px;
-        width: 60%
     }
-
-    form button {
+    .button button {
         font-size: 1.2rem;
         padding: 15px 35px;
     }
-    form button:hover {}
+    .button button:hover {
+  
+    }
     .socialMedia {
         order: 4;
-        justify-content: flex-end;
+        justify-content:flex-end;
     }
-    .fbIcon,
-    instaIcon {
+    .fbIcon, instaIcon {
         margin: 0 20px;
     }
     .instaIcon {
@@ -894,8 +746,8 @@ form button:hover {
     }
 }
 
-@media only screen and (max-width: 1025px) and (orientation: landscape) {
-    .contact {
+@media only screen and (max-width: 1025px) and (orientation: landscape){
+    #contact {
         height: 450px;
     }
     .contactLogo {
@@ -903,8 +755,7 @@ form button:hover {
         width: 15%;
     }
     .contactData {
-        margin-top: 50px;
-        ;
+        margin-top: 50px;;
     }
     .fbIcon {
         width: 60px;
@@ -919,13 +770,12 @@ form button:hover {
     }
 }
 
-@media only screen and (max-height: 480px) and (orientation: landscape) {
+@media only screen and (max-height: 480px) and (orientation: landscape){
     .contactData {
         height: 1%;
         margin-top: 15px;
     }
 }
-
 @media only screen and (min-width: 1024px) and (max-width: 1500px) {
     form {
         width: 40%;

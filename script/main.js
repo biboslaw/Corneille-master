@@ -80,7 +80,7 @@ function toggleMenuScroll(e) {
 function addModal(e) {
     openModal(e)
 }
-
+// removing modal //
 function closeModal(e) {
     var removeNode = e.target.querySelector('.modalGallery')
     console.log(removeNode)
@@ -88,7 +88,7 @@ function closeModal(e) {
     e.target.classList.add('hidden')
 }
 
-
+// switch navigation menu betweene deskopt and mobile //
 function changeDisplay(e) {
     e.preventDefault();
     var a = e.target.parentElement.querySelectorAll('a')
@@ -109,7 +109,7 @@ function hideNav(e) {
     e.target.parentElement.style.position = 'absolute'
 }
 
-
+// creating modal //
 function openModal(e) {
     var section = document.querySelectorAll('section');
     for (i = 0; i < section.length; i++) {
@@ -161,6 +161,7 @@ function openModal(e) {
     modal.classList.remove('hidden')
 
 }
+
 
 function insert(original, string, place) {
     var array = original.split('');

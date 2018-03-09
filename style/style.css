@@ -552,6 +552,16 @@ form button:hover {
         width: 30%;
         height: auto;
     }
+    .logoNav {
+        display: inline-block;
+        position: fixed;
+        top: 50px;
+        left: 150px;
+        width: 13%;
+        z-index: 3;
+        transition: 0.4s linear;
+        border: 1px solid white;
+    }
     .about {
         width: 80%;
         padding: 0;
@@ -631,8 +641,8 @@ form button:hover {
         left: 250px;
         width: 13%;
         z-index: 3;
-
         transition: 0.4s linear;
+        border: 1px solid white;
     }
 
     .logo {

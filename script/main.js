@@ -52,8 +52,8 @@ function toggleMenu(e) {
     var nav = document.querySelector('nav');
     var logo = document.querySelector('.logoNav')
     var windowTopPos = document.documentElement.scrollTop || document.body.scrollTop;
-
-    if (e.clientY > 300 && windowTopPos > 300) {
+    var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+    if (e.clientY > 200 && windowTopPos > 300 && width > 600) {
         nav.classList.add('hidden2')
         logo.classList.add('hidden2')
     } else {
@@ -64,10 +64,11 @@ function toggleMenu(e) {
 }
 
 function toggleMenuScroll(e) {
+    var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
     var windowTopPos = document.documentElement.scrollTop || document.body.scrollTop;
     var nav = document.querySelector('nav');
     var logo = document.querySelector('.logoNav')
-    if (windowTopPos > 300) {
+    if (windowTopPos > 200 && width > 600) {
         nav.classList.add('hidden2')
         logo.classList.add('hidden2')
     } else {
@@ -91,22 +92,20 @@ function closeModal(e) {
 // switch navigation menu betweene deskopt and mobile //
 function changeDisplay(e) {
     e.preventDefault();
-    var a = e.target.parentElement.querySelectorAll('a')
+    e.target.parentElement.querySelector('.topnav').classList.add('topnavRwd')
+    e.target.classList.add('hidden2')
+    var a = document.querySelectorAll('.topnav a')
     console.log(a)
     for (var i = 0; i < a.length; i++) {
-        e.target.parentElement.querySelector('.topnav').style.position = 'relative'
-        a[i].classList.toggle('topnavRwd')
+        a[i].addEventListener('click', function (e) {
+            hideNav(e)
+        })
     }
 }
 
 function hideNav(e) {
-    var topnaw = e.target.parentElement.querySelectorAll('a')
-    console.log(topnaw)
-    for (var i = 0; i < topnaw.length; i++) {
-        topnaw[i].classList.toggle('topnavRwd')
-        console.log(topnaw[i])
-    }
-    e.target.parentElement.style.position = 'absolute'
+    e.target.parentElement.classList.remove('topnavRwd')
+    document.querySelector('.iconRwd').classList.remove('hidden2')
 }
 
 // creating modal //

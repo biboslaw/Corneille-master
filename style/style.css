@@ -3,6 +3,11 @@
     src: url(../fonts/OpenSans-Light.ttf);
 }
 
+@font-face {
+    font-family: adventPro;
+    src: url(../fonts/AdventPro-Regular.ttf);
+}
+
 html {
     background-color: #9a9d9e;
 }
@@ -18,7 +23,7 @@ body {
 nav {
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
     opacity: 1;
     transition: 0.2s linear;
 }
@@ -33,13 +38,12 @@ nav {
 
 .topnav a {
     display: inline-block;
-
     color: white;
     text-align: center;
-
     text-decoration: none;
     font-size: 2.5rem;
     padding: 32px 20px 32px 20px;
+    transition: all 0.2s linear;
 }
 
 .topnav a:hover {
@@ -53,8 +57,6 @@ nav {
 
 .iconRwd {
     display: none;
-    float: right;
-    text-align: center;
 }
 
 .logoLink {
@@ -158,7 +160,7 @@ nav {
     background-color: #727071;
 }
 
-.products h2 {
+.products h1 {
     text-align: center;
 }
 
@@ -487,18 +489,37 @@ form button:hover {
 
 @media only screen and (max-width: 600px) {
 
-    .topnav a {
-        display: none;
-        transition: 0.2s;
+    .topnav {
+        display: block;
+        /*top: -171px;*/
+        transform: translateY(-171px);
+        color: darkgrey;
+        background-color: transparent;
+        position: absolute;
+        float: none;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #888;
+        z-index: -1;
+        height: auto;
+        transition: 0.3s linear;
+    }
 
+    .topnav a {
+        float: none;
+        width: 100%;
+        display: block;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #888;
+        padding: 15px 10px 15px 10px;
+        font-size: 1.2rem;
     }
 
     .iconRwd {
         outline: none;
         height: 44px;
         width: 56px;
-        float: right;
-        display: inline-block;
+        display: block;
         padding: 0 0 4px 0;
         margin: 0;
         font-size: 32px;
@@ -507,34 +528,18 @@ form button:hover {
         border-bottom-left-radius: 5px;
         border: none;
         position: fixed;
-
-    }
-
-    .topnav {
-        color: darkgrey;
-        background-color: transparent;
-        position: absolute;
-        float: none;
-        width: 100%;
-        display: block;
-        background-color: rgba(255, 255, 255, 0.8);
-        color: #888;
-        z-index: -1;
+        text-align: center;
+        top: 0;
+        right: 0;
     }
 
     .topnav a.active {
         background-color: rgba(0, 0, 0, 0.1);
     }
-    .topnav a.topnavRwd {
-        float: none;
-        width: 100%;
-        display: block;
-        background-color: rgba(255, 255, 255, 0.8);
-        color: #888;
-
-    }
-    .topnav a.iconRwd2 {
-        display: none;
+    .topnavRwd {
+        /*top: 0;*/
+        transform: translateY(0);
+        position: relative;
     }
 }
 
@@ -551,16 +556,6 @@ form button:hover {
         background-color: silver;
         width: 30%;
         height: auto;
-    }
-    .logoNav {
-        display: inline-block;
-        position: fixed;
-        top: 50px;
-        left: 150px;
-        width: 13%;
-        z-index: 3;
-        transition: 0.4s linear;
-        border: 1px solid white;
     }
     .about {
         width: 80%;
@@ -623,7 +618,18 @@ form button:hover {
     }
 }
 
-
+@media only screen and (min-width: 950px) and (max-width: 1025px) {
+    .logoNav {
+        display: inline-block;
+        position: fixed;
+        top: 50px;
+        left: 50px;
+        width: 13%;
+        z-index: 3;
+        transition: 0.4s linear;
+        border: 1px solid white;
+    }
+}
 
 @media only screen and (min-width: 1025px) {
     html {
@@ -674,12 +680,6 @@ form button:hover {
         height: 80%;
         overflow-y: hidden;
     }
-    .products {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: stretch;
-        margin: 0 auto;
-    }
     .sentence {
         margin: 20px 0;
     }
@@ -689,51 +689,55 @@ form button:hover {
     .sentence div h1 {
         text-align: center;
     }
-    .product {
-        margin-top: 8rem;
-        width: 45%;
-        box-sizing: border-box;
-        margin-bottom: 2em;
-        display: flex;
+    .products {
         flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+        margin-top: 200px;
+    }
+    .product {
+        height: 50vh;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+        overflow: hidden;
+        font-family: openSans;
     }
     .product img {
-        width: 60%;
+        width: 50vw;
         margin-top: 0px;
-
+        border-radius: 0;
+        overflow: hidden;
+        object-fit: cover;
     }
-    .product[data-product='dorica'] img {
-        margin-right: 0;
-        margin-top: 2rem;
-
-    }
-    .product[data-product='cora'] img {
-        margin-left: 0;
-    }
+    .product[data-product='dorica'] img {}
+    .product[data-product='cora'] img {}
     .rightDesc {
-        margin-top: 2.3em;
         background-color: #504a4a;
-        height: 240px;
+        width: 50vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        z-index: 1;
     }
-    .products .rightDesc > * {
-        width: 59%;
-        padding-left: 2%;
-
+    .rightDesc p,
+    .leftDesc p {
+        font-size: 1.3em;
+        padding: 0 60px;
+    }
+    .rightDesc h1,
+    .leftDesc h1 {
+        font-size: 3em;
     }
     .leftDesc {
         background-color: #504a4a;
-        margin-right: 0;
-        height: 240px;
-
-    }
-    .products .leftDesc > * {
-        width: 59%;
-        padding-right: 2%;
-        float: right;
-
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 1;
     }
     .picture img {
         width: 80%;

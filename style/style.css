@@ -28,6 +28,11 @@ nav {
     transition: 0.2s linear;
 }
 
+section {
+    transition: 0.2s linear;
+    transform: translateX(0);
+}
+
 .topnav {
     background-color: #727071;
     overflow: hidden;
@@ -125,6 +130,17 @@ nav {
 
 .picture {
     height: auto;
+    perspective: 1px;
+    position: relative;
+}
+
+.picture div {
+    background-image: url(../images/midScreenBack.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 70vh;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .sentence {
@@ -194,7 +210,7 @@ nav {
     display: block;
     margin: 0 auto;
     cursor: pointer;
-    transition: all 0.1s linear;
+    transition: 0.1s linear;
     filter: grayscale(0.4);
 }
 
@@ -245,13 +261,13 @@ nav {
     font-size: 1.2rem;
 }
 
-.contactHeader {
+.header {
     padding: 20px;
     background-color: white;
 
 }
 
-.contactHeader h1 {
+.header h1 {
     margin: 0 auto;
     color: #504a4a;
     font-weight: 100;
@@ -409,18 +425,14 @@ form button:hover {
     top: 0;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 5;
-
+    opacity: 0;
+    transform: translateY(-100vh);
+    transition: 0.3s linear;
 }
 
-.modalBlur {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 4;
-
+.hiddenModal {
+    opacity: 1;
+    transform: translate(0)
 }
 
 .blur {
@@ -454,6 +466,45 @@ form button:hover {
 .modal .modalGallery img:nth-child(3) {
     margin-left: 6px;
     margin-right: 6px;
+}
+
+[data-fade='fade'] {
+    opacity: 0;
+}
+
+.animBlock {
+    position: relative;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all 1s ease-in;
+    -moz-transition: all 1s ease-in;
+    -ms-transition: all 1s ease-in;
+    -o-transition: all 1s ease-in;
+    transition: all 1s ease-in;
+    will-change: opacity, transform;
+    overflow: hidden;
+}
+
+[data-fade='fadeLeft'] {
+    transform: translateX(-100px);
+}
+
+[data-fade='fadeRight'] {
+    transform: translateX(100px);
+}
+
+[data-fade='fadeTop'] {
+    transform: translateY(-100px);
+}
+
+[data-fade='fadeBottom'] {
+    transform: translateY(100px);
+}
+
+.viewed {
+    transform: none;
+    opacity: 1;
+    filter: alpha(opacity=100);
 }
 
 @media only screen and (max-height: 480px) {
@@ -562,6 +613,9 @@ form button:hover {
         padding: 0;
         margin: 0 auto;
     }
+    .picture + .sentence {
+        margin-bottom: 50px;
+    }
     .products .product {
         width: 70%;
     }
@@ -639,6 +693,9 @@ form button:hover {
     .home {
         display: none;
     }
+    .topnav {
+        box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.3);
+    }
 
     .logoNav {
         display: inline-block;
@@ -683,6 +740,9 @@ form button:hover {
     .sentence {
         margin: 20px 0;
     }
+    .picture + .sentence {
+        margin-bottom: 150px;
+    }
     .sentence div {
         height: 180px;
     }
@@ -693,7 +753,8 @@ form button:hover {
         flex-direction: column;
         justify-content: space-between;
         align-items: stretch;
-        margin-top: 200px;
+        margin-bottom: 150px;
+
     }
     .product {
         height: 50vh;
@@ -756,7 +817,7 @@ form button:hover {
     }
     .picture2 {
         height: 50vh;
-        margin: 70px auto;
+        margin: 0 auto 200px auto;
 
     }
     .picture2 div {
@@ -789,16 +850,16 @@ form button:hover {
         height: 70vh;
         background-color: #727071;
     }
-    .contactHeader {
+    .header {
         margin-bottom: 80px;
-        height: 180px;
-        -webkit-box-shadow: 0px 0px 7px 4px rgba(50, 50, 50, 0.5);
+        height: 150px;
+        /*        -webkit-box-shadow: 0px 0px 7px 4px rgba(50, 50, 50, 0.5);
         -moz-box-shadow: 0px 0px 7px 4px rgba(50, 50, 50, 0.5);
-        box-shadow: 0px 0px 7px 4px rgba(50, 50, 50, 0.5);
+        box-shadow: 0px 0px 7px 4px rgba(50, 50, 50, 0.5);*/
     }
-    .contactHeader h1 {
+    .header h1 {
         text-align: center;
-        line-height: 180px;
+        line-height: 150px;
         font-size: 4rem;
         font-weight: 300;
     }

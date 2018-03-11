@@ -1,29 +1,31 @@
 function main() {
-
-    /*var test = document.querySelectorAll('.topnav a')
+    var section;
+    var nav;
+    var test = document.querySelectorAll('.topnav a')
+    console.log(test)
     for (var i = 0; i < test.length; i++) {
         test[i].addEventListener('click', function (e) {
             var temp = e.target.getAttribute('href')
 
             console.log(temp)
-            document.querySelector('#contact').scrollIntoView({
+            document.querySelector(temp).scrollIntoView({
                 behavior: 'smooth'
             })
         })
-    }*/
-    var test = document.querySelector('.picture')
+    }
+    /*var test = document.querySelector('.picture')
     test.addEventListener('click', function () {
         document.querySelector('#contact').scrollIntoView({
             behavior: 'smooth'
         })
-    })
+    })*/
+    show()
 
-
-    document.addEventListener('mousemove', function (e) {
-        toggleMenu(e);
+    document.addEventListener('mousemove', function (e, nav) {
+        toggleMenu(e, nav);
     })
-    document.addEventListener('scroll', function (e) {
-        toggleMenuScroll(e);
+    document.addEventListener('scroll', function (e, nav) {
+        toggleMenuScroll(e, nav);
     })
     var hamburger = document.querySelector('.iconRwd')
     hamburger.addEventListener('click', function (e) {
@@ -37,19 +39,39 @@ function main() {
     })
 
     var modal = document.querySelector('.modal')
-    modal.addEventListener('click', function (e) {
-        closeModal(e)
+    modal.addEventListener('click', function (e, section) {
+        closeModal(e, section)
     })
     var images = document.querySelectorAll('#products .product img')
     for (var j = 0; j < images.length; j++) {
-        images[j].addEventListener('click', addModal)
+        images[j].addEventListener('click', function (e, section) {
+            openModal(e, section)
+        })
     }
+    document.addEventListener('scroll', show)
 }
 
 // end of main function //
 
-function toggleMenu(e) {
-    var nav = document.querySelector('nav');
+function show() {
+    var notViewed = document.querySelectorAll('.notViewed')
+    var windowTopPos = document.documentElement.scrollTop || document.body.scrollTop;
+    var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+    var rect;
+    for (var i = 0; i < notViewed.length; i++) {
+        rect = notViewed[i].getBoundingClientRect()
+        if (windowTopPos + rect.top < windowHeight + windowTopPos) {
+            console.log(windowHeight + windowTopPos)
+            //console.log(windowTopPos + rect.top)
+            notViewed[i].classList.add('viewed')
+            notViewed[i].classList.remove('notViewed')
+            //console.log('element: ' + i + ' ' + notViewed[i] + ', offset: ' + notViewed[i].offsetTop + ', windowHeight: ' + windowHeight + ', windowTopPos: ' + windowTopPos)
+        }
+    }
+}
+
+function toggleMenu(e, nav) {
+    nav = document.querySelector('nav');
     var logo = document.querySelector('.logoNav')
     var windowTopPos = document.documentElement.scrollTop || document.body.scrollTop;
     var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
@@ -63,10 +85,10 @@ function toggleMenu(e) {
     }
 }
 
-function toggleMenuScroll(e) {
+function toggleMenuScroll(e, nav) {
     var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
     var windowTopPos = document.documentElement.scrollTop || document.body.scrollTop;
-    var nav = document.querySelector('nav');
+    nav = document.querySelector('nav');
     var logo = document.querySelector('.logoNav')
     if (windowTopPos > 200 && width > 600) {
         nav.classList.add('hidden2')
@@ -78,15 +100,17 @@ function toggleMenuScroll(e) {
     }
 }
 
-function addModal(e) {
-    openModal(e)
-}
 // removing modal //
-function closeModal(e) {
+function closeModal(e, section) {
+    section = document.querySelectorAll('section')
+    section = document.querySelectorAll('section')
+    for (i = 0; i < section.length; i++) {
+        section[i].classList.remove('blur');
+    }
     var removeNode = e.target.querySelector('.modalGallery')
     console.log(removeNode)
     e.target.removeChild(removeNode)
-    e.target.classList.add('hidden')
+    e.target.classList.remove('hiddenModal')
 }
 
 // switch navigation menu betweene deskopt and mobile //
@@ -109,8 +133,8 @@ function hideNav(e) {
 }
 
 // creating modal //
-function openModal(e) {
-    var section = document.querySelectorAll('section');
+function openModal(e, section) {
+    section = document.querySelectorAll('section')
     for (i = 0; i < section.length; i++) {
         section[i].classList.add('blur');
     }
@@ -157,7 +181,7 @@ function openModal(e) {
             }
         })
     }
-    modal.classList.remove('hidden')
+    modal.classList.add('hiddenModal')
 
 }
 

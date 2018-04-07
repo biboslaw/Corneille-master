@@ -18,6 +18,7 @@ body {
     font-family: openSans;
     color: white;
     letter-spacing: 0.02rem;
+    background-color:  #727071
 }
 
 nav {
@@ -38,7 +39,7 @@ section {
     overflow: hidden;
     height: 120px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .topnav a {
@@ -49,6 +50,10 @@ section {
     font-size: 2.5rem;
     padding: 32px 20px 32px 20px;
     transition: all 0.2s linear;
+}
+
+.topnav a:nth-child(3){
+    margin-right: 10%;
 }
 
 .topnav a:hover {
@@ -139,7 +144,6 @@ section {
     background-position: center center;
     background-size: cover;
     height: 70vh;
-    width: 80%;
     margin: 0 auto;
 }
 
@@ -158,12 +162,12 @@ section {
 }
 
 .sentence div h1 {
-    padding: 70px 0;
+    padding: 40px 0;
     margin: 0 auto;
     text-align: center;
     font-family: openSans;
     letter-spacing: 0.09rem;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     color: #ddd;
     text-align: justify;
 }
@@ -276,7 +280,6 @@ section {
 }
 
 .contact {
-    background-color: #9a9d9e;
     text-align: center;
     position: relative;
     display: flex;
@@ -701,7 +704,7 @@ form button:hover {
         display: inline-block;
         position: fixed;
         top: 50px;
-        left: 250px;
+        left: 6%;
         width: 13%;
         z-index: 3;
         transition: 0.4s linear;
@@ -738,7 +741,7 @@ form button:hover {
         overflow-y: hidden;
     }
     .sentence {
-        margin: 20px 0;
+     
     }
     .picture + .sentence {
         margin-bottom: 150px;
@@ -747,6 +750,7 @@ form button:hover {
         height: 180px;
     }
     .sentence div h1 {
+        font-size: 1.7em;
         text-align: center;
     }
     .products {
@@ -851,17 +855,16 @@ form button:hover {
         background-color: #727071;
     }
     .header {
-        margin-bottom: 80px;
         height: 150px;
-        /*        -webkit-box-shadow: 0px 0px 7px 4px rgba(50, 50, 50, 0.5);
-        -moz-box-shadow: 0px 0px 7px 4px rgba(50, 50, 50, 0.5);
-        box-shadow: 0px 0px 7px 4px rgba(50, 50, 50, 0.5);*/
     }
     .header h1 {
         text-align: center;
         line-height: 150px;
         font-size: 4rem;
         font-weight: 300;
+    }
+    #contact .header {
+        margin-bottom: 150px;
     }
     .contactData {
         margin-bottom: 10px;
@@ -930,7 +933,6 @@ form button:hover {
         font-size: 1.2rem;
         padding: 15px 35px;
     }
-    form button:hover {}
     .socialMedia {
         order: 4;
         justify-content: flex-end;
